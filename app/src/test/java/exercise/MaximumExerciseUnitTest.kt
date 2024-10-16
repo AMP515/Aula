@@ -1,48 +1,48 @@
 package exercise
 
 import com.example.myapplication.exercies.MaximumExercise
-import junit.framework.TestCase.assertEquals
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class MaximumExerciseUnitTest {
 
     @Test
-    fun testLength_BothPositiveNumbers() {
+    fun testMax_BothPositiveNumbers() {
         val exercise = MaximumExercise()
 
         val max = exercise.max(5, 10)
-        assertEquals(10, max)
+        assertEquals(10, max) // 10 é o valor esperado
     }
 
     @Test
-    fun testLength_BothNegativeNumbers() {
+    fun testMax_BothNegativeNumbers() {
         val exercise = MaximumExercise()
 
         val max = exercise.max(-8, -3)
-        assertEquals(-3, max)
+        assertEquals(-3, max) // -3 é o valor esperado
     }
 
     @Test
-    fun testLength_PositiveAndNegativeNumber() {
+    fun testMax_PositiveAndNegativeNumber() {
         val exercise = MaximumExercise()
 
         val max = exercise.max(-2, 7)
-        assertEquals(7, max)
+        assertEquals(7, max) // 7 é o valor esperado
     }
 
     @Test
-    fun testLength_ZeroAndPositiveNumber() {
+    fun testMax_ZeroAndPositiveNumber() {
         val exercise = MaximumExercise()
 
         val max = exercise.max(0, 12)
-        assertEquals(12, max)
+        assertEquals(12, max) // 12 é o valor esperado
     }
 
     @Test
-    fun testLength_ZeroAndNegativeNumber() {
+    fun testMax_ZeroAndNegativeNumber() {
         val exercise = MaximumExercise()
 
         val max = exercise.max(-6, 0)
-        assertEquals(0, max)
+        assertEquals(0, max) // 0 é o valor esperado
     }
 }
